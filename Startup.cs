@@ -5,12 +5,14 @@ using System.Threading;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+
 
 namespace Angular2Spa
 {
@@ -37,6 +39,7 @@ namespace Angular2Spa
             // Add framework services.
             services.AddMvc();
             services.AddMemoryCache();
+            services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
