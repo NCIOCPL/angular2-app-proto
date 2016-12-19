@@ -16,12 +16,6 @@ RUN ["npm", "install"]
 RUN ["node", "./node_modules/webpack/bin/webpack.js", "--config", "webpack.config.vendor.js", "--env.prod"]
 RUN ["node", "./node_modules/webpack/bin/webpack.js", "--env.prod"]
 
-
-EXPOSE 8080/tcp
-
-RUN ["pwd"]
-ENTRYPOINT ["dotnet", "run", "--server.urls", "http://0.0.0.0:8080"]
-
 EXPOSE 8080/tcp
 
 RUN ["pwd"]

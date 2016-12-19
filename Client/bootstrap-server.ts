@@ -23,9 +23,9 @@ export default function (params: IParams): Promise<{ html: string, globals?: any
         ngModule: AppServerModule,
         document: doc,
         preboot: false,
-        baseUrl: '/',
-        requestUrl: params.url,
-        originUrl: params.origin
+        baseUrl: '/foo',
+        requestUrl: params.url + "/bar",
+        originUrl: params.origin + "/bazz"
     };
 
     // defaults

@@ -48,6 +48,10 @@ namespace Angular2Spa
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
+            app.UseCors(builder =>
+                builder.AllowAnyOrigin()
+            );
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
